@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('фон.jpg') center/cover no-repeat;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            padding: 8px 15px;
+            transition: color 0.3s ease, border 0.3s ease;
+        }
+
+            nav ul li a:hover {
+                color: #ffc107;
+                border-color: #ffc107;
+            }
+
+main {
+    flex: 1;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.button11 {
+    margin-left: 75%;
+    background-color: rgba(255, 193, 7, 0.8);
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, margin-left 0.3s ease;
+}
+
+    .button11:hover {
+        background-color: rgba(224, 168, 0, 0.8);
+        margin-left: 75%;
+    }
+
+#translator {
+    width: 1000px;
+    border: 1px solid transparent;
+    padding: 10px;
+}
+
+#video-container {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+#Video-list {
+    width: 100%;
+    max-width: 579px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.videos-all {
+    width: 100%;
+    height: 100%;
+}

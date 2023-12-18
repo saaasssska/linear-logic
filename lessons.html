@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lessons.css">
+  <title>Your Website</title>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="logo">L<span>in</span>ear Logic</div>
+      <nav>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+          <li><a href="#">Test</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-text">
+        <div id="translator">
+          <div id="video-list">
+            <p>Lessons</p> 
+            <select id="video-gallery" class="button11" onchange="changeVideo()">
+              <option value="https://www.youtube.com/embed/DtZuw5LOovg">Lesson 1</option>
+              <option value="https://www.youtube.com/embed/S6yg8N0VWAY">Lesson 2</option>
+              <option value="https://www.youtube.com/embed/cSy6pB4ICGI">Lesson 3</option>
+              <option value="https://www.youtube.com/embed/JZ1q0U9OEJU">Lesson 4</option>
+              <option value="https://www.youtube.com/embed/iCPd2GgsdCs">Lesson 5</option>
+            </select>
+          </div>
+          <div id="video-container">
+            <iframe id="player" class="videos-all" src="https://www.youtube.com/embed/DtZuw5LOovg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function changeVideo() {
+      var videoGallery = document.getElementById("video-gallery");
+      var player = document.getElementById("player");
+
+      // Получаем выбранное значение из выпадающего списка
+      var selectedVideo = videoGallery.value;
+
+      // Меняем источник видео в iframe
+      player.src = selectedVideo;
+    }
+  </script>
+</body>
+</html>
