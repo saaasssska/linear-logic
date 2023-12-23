@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tests.css">
+    <title>Your Website</title>
+</head>
+<body>
+
+    <div class="container">
+        <header class="navbar">
+            <div class="logo">L<span>in</span>ear Logic</div>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="tests.html">Test</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-text">
+                <form id="testForm">
+                    <ol>
+                        <li>
+                            <h3> <span> Что такое матрица? </span> </h3>
+                            <label class="Correct nocolor"><input type="radio" name="q1" value="one"> Упорядоченный набор чисел в виде прямоугольной таблицы </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q1" value="two"> Графическое представление данных в виде таблицы </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q1" value="three"> Способ представления текстовой информации </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Что представляют собой векторы в линейной алгебре? </span> </h3>
+                            <label class="Incorrect nocolor"><input type="radio" name="q2" value="one"> Точки в пространстве </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q2" value="two"> Квадратные матрицы </label><br>
+                            <label class="Correct nocolor"><input type="radio" name="q2" value="three"> Направленные отрезки, имеющие длину и направление </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Какое утверждение верно относительно определителей и их свойств? </span> </h3>
+                            <label class="Incorrect nocolor"><input type="radio" name="q3" value="one"> Определитель матрицы равен произведению ее элементов </label><br>
+                            <label class="Correct nocolor"><input type="radio" name="q3" value="two"> Определитель меняет знак при транспонировании матрицы </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q3" value="three"> Определитель матрицы равен сумме элементов главной диагонали </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Что означает термин "аналитическая геометрия"? </span> </h3>
+                            <label class="Correct nocolor"><input type="radio" name="q4" value="one"> Изучение геометрических объектов с использованием методов алгебры </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q4" value="two"> Геометрия, основанная на численных методах </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q4" value="three"> Изучение геометрии с использованием методов физики </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Какой метод используется для решения систем линейных уравнений и включает исключение переменных? </span> </h3>
+                            <label class="Correct nocolor"><input type="radio" name="q5" value="one"> Метод Гаусса </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q5" value="two"> Метод Крамера </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q5" value="three"> Метод сравнения коэффициентов </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Что такое базис в линейной алгебре? </span> </h3>
+                            <label class="Incorrect nocolor"><input type="radio" name="q6" value="one"> Ортогональное множество векторов </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q6" value="two"> Множество всех возможных векторов </label><br>
+                            <label class="Correct nocolor"><input type="radio" name="q6" value="three"> Минимальный линейно независимый набор векторов, способный порождать все векторы в данном линейном пространстве </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Что утверждает теорема о разложении определителя по строке? </span> </h3> 
+                            <label class="Incorrect nocolor"><input type="radio" name="q7" value="one"> Определитель матрицы равен произведению элементов строки </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q7" value="two"> Определитель матрицы равен произведению элементов главной диагонали </label><br>
+                            <label class="Correct nocolor"><input type="radio" name="q7" value="three"> Определитель матрицы равен сумме произведений элементов строки на их алгебраические дополнения </label><br>
+                        </li>
+                        <li>
+                            <h3> <span> Каково уравнение плоскости в трехмерном пространстве? </span> </h3>
+                            <label class="Incorrect nocolor"><input type="radio" name="q8" value="one"> y=kx+b </label><br>
+                            <label class="Correct nocolor"><input type="radio" name="q8" value="two"> ax+by+cz+d=0 </label><br>
+                            <label class="Incorrect nocolor"><input type="radio" name="q8" value="three"> ax+by+c=0 </label><br>
+                        </li>
+                    </ol>
+                    <input type="submit" value="Подтвердить" class="button">
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+    <div id="results">
+        <script>
+            document.getElementById('testForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const form = e.target;
+                const userAnswers = {
+                    q1: form.q1.value,
+                    q2: form.q2.value,
+                    q3: form.q3.value,
+                    q4: form.q4.value,
+                    q5: form.q5.value,
+                    q6: form.q6.value,
+                    q7: form.q7.value,
+                    q8: form.q8.value,
+                };
+                const correctAnswers = {
+                    q1: 'one',
+                    q2: 'three',
+                    q3: 'two',
+                    q4: 'one',
+                    q5: 'one',
+                    q6: 'three',
+                    q7: 'three',
+                    q8: 'two',
+                };
+                let score = 0;
+
+                for (const question in userAnswers) {
+                    if (userAnswers[question] === correctAnswers[question]) {
+                        score++;
+                    }
+                }
+
+                const results = document.getElementById('results');
+                results.innerHTML = `Вы набрали ${score} из 8`;
+
+
+                var elem = document.getElementsByClassName("nocolor");
+                while (elem.length)
+                    elem[0].className = elem[0].className.replace(/\bnocolor\b/g, "");
+
+            });
+        </script>
+    </div>
+
+</body>
+</html>
